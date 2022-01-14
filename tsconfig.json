@@ -1,12 +1,23 @@
 {
     "compilerOptions": {
-      "target": "ES2015",
-      "module": "commonjs",
-      "strict": true,
+      "target": "es6",
+      "lib": [
+        "dom",
+        "dom.iterable",
+        "esnext"
+      ],
       "esModuleInterop": true,
-      "skipLibCheck": true,
-      "forceConsistentCasingInFileNames": true
+      "module": "esnext",
+      "moduleResolution": "node",
+      "jsx": "react",
+      "rootDirs": ["src", "tests"],
+      "baseUrl": "src",
+      "paths": {
+        "@/*": ["*"],
+        "@/tests/*": ["../tests/*"]
+      },
+      "allowJs": true,
+      "resolveJsonModule": true
     },
-    "$schema": "https://json.schemastore.org/tsconfig",
-    "display": "Recommended"
+    "include": ["src"],
   }
